@@ -17,5 +17,8 @@ const newLatitude = (shiftNorth, baseLatitude) => {
 export const generateBounds = (width, height) => {
     const newLat = newLatitude(height / 5, 0);
     const newLong = newLongitude(width / 5, 0, 0);
-    return [[-newLat, -newLong], [newLat, newLong]];
+    return [
+        [-newLat, -newLong],
+        [newLat, newLong],
+    ];
 };

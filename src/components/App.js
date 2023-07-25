@@ -9,7 +9,6 @@ const App = () => {
     const bounds = generateBounds(width, height);
     const maxBounds = generateBounds(width, height + 300);
 
-
     return (
         <MapContainer
             center={[0, 0]}
@@ -20,10 +19,7 @@ const App = () => {
             interactive={true}
             zoomSnap={0.25}
         >
-            <ImageOverlay
-                url='/iceberg.png'
-                bounds={bounds}
-            />
+            <ImageOverlay url="/iceberg.png" bounds={bounds} />
         </MapContainer>
     );
 };

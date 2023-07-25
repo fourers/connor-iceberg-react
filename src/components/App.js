@@ -3,6 +3,7 @@ import { MapContainer, ImageOverlay } from 'react-leaflet';
 import { generateBounds } from '../util';
 import './App.css';
 import Atlas from './Atlas';
+import EventHandlers from './EventHandlers';
 
 export default function App() {
     const width = 640;
@@ -22,6 +23,7 @@ export default function App() {
         >
             <ImageOverlay url="/iceberg.png" bounds={bounds} />
             <Atlas />
+            <EventHandlers />
         </MapContainer>
     );
 }

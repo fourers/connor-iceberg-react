@@ -2,6 +2,7 @@ import React from 'react';
 import { MapContainer, ImageOverlay } from 'react-leaflet';
 import { generateBounds } from '../util';
 import './App.css';
+import Atlas from './Atlas';
 
 export default function App() {
     const width = 640;
@@ -20,6 +21,7 @@ export default function App() {
             zoomSnap={0.25}
         >
             <ImageOverlay url="/iceberg.png" bounds={bounds} />
+            <Atlas />
         </MapContainer>
     );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { MapContainer, ImageOverlay } from 'react-leaflet';
-import './App.css';
 import { generateBounds } from '../util';
+import './App.css';
 
-const App = () => {
+export default function App() {
     const width = 640;
     const height = 1143;
     const bounds = generateBounds(width, height);
@@ -16,12 +16,10 @@ const App = () => {
             minZoom={8}
             maxZoom={10}
             maxBounds={maxBounds}
-            interactive={true}
+            interactive
             zoomSnap={0.25}
         >
             <ImageOverlay url="/iceberg.png" bounds={bounds} />
         </MapContainer>
     );
-};
-
-export default App;
+}

@@ -23,7 +23,7 @@
         "eslint": "^7.32.0 || ^8.2.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jsx-a11y": "^6.5.1",
         "eslint-plugin-prettier": "^5.0.0",
         "eslint-plugin-react": "^7.28.0",
@@ -38,8 +38,8 @@
     "scripts": {
         "build": "webpack",
         "dev": "webpack-dev-server",
-        "lint": "eslint",
-        "lint:fix": "eslint --fix",
-        "format": "prettier . --write --config ./.prettierrc"
+        "lint": "eslint --ext .js src/",
+        "lint:fix": "eslint --fix --ext .js src/",
+        "format": "prettier . --write --config ./.prettierrc './**/*.{js,jsx,ts,tsx,css,md,json}'"
     }
 }

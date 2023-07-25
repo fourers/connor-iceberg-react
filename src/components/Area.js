@@ -12,7 +12,7 @@ export default function Area({ index, setIndex, bounds }) {
     return (
         <Rectangle
             bounds={bounds}
-            pathOptions={{ color: 'white' }}
+            pathOptions={{ color: 'white', opacity: 0, fillOpacity: 0 }}
             eventHandlers={{ mouseover: mouseOver, mouseout: mouseOut }}
         />
     );

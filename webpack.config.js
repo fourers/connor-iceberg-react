@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const port = process.env.PORT || 3000;
@@ -8,6 +9,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.[hash].js',
+        publicPath: 'auto',
     },
     devtool: 'inline-source-map',
     module: {
@@ -27,6 +29,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'public/index.html',
             favicon: 'public/favicon.ico',
+        }),
+        new CopyWebpackPlugin({
+            patterns: ['public/images'],
         }),
     ],
     devServer: {

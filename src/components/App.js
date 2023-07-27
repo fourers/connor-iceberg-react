@@ -31,7 +31,7 @@ export default function App() {
             interactive
             zoomSnap={0.25}
         >
-            <ImageOverlay url="/images/iceberg.png" bounds={bounds} />
+            <ImageOverlay url="iceberg.png" bounds={bounds} />
             <Atlas />
             <EventHandlers />
         </MapContainer>
